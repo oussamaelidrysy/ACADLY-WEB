@@ -1,0 +1,219 @@
+.header {
+  background-color: rgb(8, 132, 241);
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+.header .left-section {
+  width: 208px;
+}
+
+@media (max-width: 800px) {
+  .header .left-section {
+    width: unset;
+  }
+}
+
+.header .header-link {
+  display: inline-block;
+  padding: 6px 9.5px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.header .header-link:hover {
+  border: 1px solid white;
+}
+
+.header .logo {
+  height: 36px;
+  border-radius: 4px;
+  margin-top: 1px;
+}
+
+.header .mobile-logo {
+  display: none;
+}
+
+@media (max-width: 675px) {
+  .header .logo {
+    display: none;
+  }
+
+  .header .mobile-logo {
+    display: block;
+    height: 26px;
+    margin-top: 1px;
+  }
+}
+
+.header .middle-section {
+  flex: 1;
+  max-width: 850px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.header .search-bar {
+  flex: 1;
+  width: 0;
+  font-size: 16px;
+  height: 38px;
+  padding-left: 15px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.header .search-button {
+  background-color: rgb(186, 255, 190);
+  border: none;
+  width: 45px;
+  height: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  flex-shrink: 0;
+}
+
+.header .search-icon {
+  height: 20px;
+  margin-left: 0px;
+  margin-top: 3px;
+}
+
+.header .right-section {
+  width: 180px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.header .orders-link {
+  color: white;
+
+  display: flex;
+  align-items: center;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.header .orders-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.header .cart-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header .cart-icon {
+  width: 38px;
+}
+
+.header .cart-text {
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.header .cart-quantity {
+  color: rgb(8, 79, 45);
+  font-size: 14px;
+  font-weight: 700;
+
+  position: absolute;
+  top: 8.5px;
+  right: 46px;
+
+  width: 26px;
+  text-align: center;
+}
+/* ...existing code... */
+
+.header .right-section a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px; /* space between icons */
+  text-decoration: none;
+}
+
+.header .right-section .socialmedia-logo {
+  border-radius: 6px;
+  
+  display: block;
+  height: 36px;       /* fits inside 60px header with room for padding */
+  max-height: 36px;
+  width: auto;        /* preserve aspect ratio */
+  object-fit: contain;
+  vertical-align: middle;
+  margin-left: 8px;   /* consistent gap between icons */
+  user-select: none;
+  pointer-events: none; /* image doesn't intercept clicks on the anchor */
+}
+
+/* slightly smaller on narrow screens */
+@media (max-width: 675px) {
+  .header .right-section .socialmedia-logo {
+    height: 28px;
+    max-height: 28px;
+    margin-left: 6px;
+  }
+}
+/* ...existing code... */
+
+.header .right-section a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px; /* space between icons */
+  padding: 0 4px; /* reduced space between icons */
+  text-decoration: none;
+}
+
+.header .right-section .socialmedia-logo {
+  border-radius: 6px;
+  
+  display: block;
+  height: 36px;       /* fits inside 60px header with room for padding */
+  max-height: 36px;
+  width: auto;        /* preserve aspect ratio */
+  object-fit: contain;
+  vertical-align: middle;
+  margin-left: 8px;   /* consistent gap between icons */
+  margin-left: 4px;   /* reduced gap between icons */
+  user-select: none;
+  pointer-events: none; /* image doesn't intercept clicks on the anchor */
+}
+
+/* slightly smaller on narrow screens */
+@media (max-width: 675px) {
+  .header .right-section .socialmedia-logo {
+    height: 28px;
+    max-height: 28px;
+    margin-left: 6px;
+    margin-left: 3px;
+  }
+}
+
+/* ...existing code... */
