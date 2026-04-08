@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Logo } from '../components/Logo'
 import './Dashboard.css'
 
 export function Dashboard() {
   const [activeTab, setActiveTab] = useState('teachers')
+
+  useEffect(() => {
+    document.title = 'Acadly - Dashboard'
+  }, [])
 
   return (
     <div className="dashboard-container">

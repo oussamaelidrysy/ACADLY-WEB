@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Logo } from '../components/Logo'
 import './Login.css'
 
@@ -6,6 +6,10 @@ export function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    document.title = 'Acadly - Login'
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
